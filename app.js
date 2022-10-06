@@ -120,6 +120,7 @@ app.delete('/api/usuarios/:id',(req,res)=>{
 })
 
 const port=process.env.PORT || 3000;
+module.exports = app;
 
 app.listen(port,()=>{
     console.log("Escuchando en el puerto "+port);
