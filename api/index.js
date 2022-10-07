@@ -2,6 +2,7 @@ const inicioDebug=require('debug')('app:inicio');
 const dbDebug=require('debug')('app:db');
 const { json } = require('express');
 const express=require('express');
+const { v4 } = require('uuid');
 const Joi=require('joi')
 const app=express();
 //const logger=require('./logger')
@@ -35,6 +36,13 @@ app.use(function(req,res,next){
     console.log('autenticando....')
     next()
 })*/
+
+app.get('/api', (req, res) => {
+    const path = `/api/item/${v4()}`;
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+    res.end(`Hello! Go to item: <a href="${path}">${path}</a>`);
+  });
 
 //Middleware de tercero
 if(app.get('env')==='development'){
