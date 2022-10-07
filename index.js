@@ -1,5 +1,5 @@
-const inicioDebug=require('debug')('app:inicio');
-const dbDebug=require('debug')('app:db');
+/*const inicioDebug=require('debug')('app:inicio');
+const dbDebug=require('debug')('app:db');*/
 const { json } = require('express');
 const express=require('express');
 const { v4 } = require('uuid');
