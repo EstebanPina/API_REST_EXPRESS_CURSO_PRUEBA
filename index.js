@@ -25,8 +25,8 @@ app.use(express.static('public'))
 
 
 //configuracion de entorno
-console.log('Aplicacion '+config.get('nombre'));
-console.log('BD server: '+config.get('configDB.host'))
+/*console.log('Aplicacion '+config.get('nombre'));
+console.log('BD server: '+config.get('configDB.host'))*/
 
 
 //Funciones middleware
@@ -45,11 +45,11 @@ app.get('/api', (req, res) => {
   });
 
 //Middleware de tercero
-if(app.get('env')==='development'){
+/*if(app.get('env')==='development'){
     app.use(morgan('tiny'))
     //console.log('morgan habilitado')
     inicioDebug("Morgan esta habilitado")
-}
+}*/
 
 //trabajos con la base de datos
 dbDebug('conectando con la base de datos')
