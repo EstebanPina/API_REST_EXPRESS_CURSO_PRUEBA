@@ -52,7 +52,7 @@ app.use(function(req,res,next){
 }*/
 
 //trabajos con la base de datos
-dbDebug('conectando con la base de datos')
+//dbDebug('conectando con la base de datos')
 
 app.get("/",(req,res)=>{
     res.send("Hola Mundo desde express");
